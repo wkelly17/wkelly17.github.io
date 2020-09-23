@@ -291,7 +291,7 @@ body {
   position: relative;
   display: block;
   margin: 0;
-  filter: brightness(0.8);
+  filter: brightness(0.5);
   transition-duration: 500ms;
 }
 
