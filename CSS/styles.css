@@ -276,14 +276,14 @@ body {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 600px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 1.25em;
   row-gap: 1em;
 }
 
 .single-project {
   border: 1px solid #000;
-  max-width: 600px;
+  max-width: 500px;
   background: var(--black);
 }
 
@@ -333,7 +333,7 @@ body {
   margin: 0.25em 0;
   font-size: 0.875rem;
   color: var(--white);
-  padding: 0.5em;
+  padding: 0.25em;
   font-size: 1.15rem;
 }
 
