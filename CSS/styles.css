@@ -76,7 +76,7 @@ body {
 .top-nav-list a {
   display: inline-block;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.275rem;
   padding: 0.25em 0em;
   color: var(--primary-darker);
 }
@@ -262,13 +262,13 @@ body {
   }
 }
 
-/*# ------------- PROJECTS SECTION ------------- */
+/*@# ------------- PROJECTS SECTION ------------- */
 
 .projects-section {
   padding: 1.75em 1em;
 }
 
-.projects-title {
+.section-title {
   color: var(--primary-darker);
   font-size: 3rem;
   margin: 0 0 0.5em;
@@ -291,7 +291,7 @@ body {
   position: relative;
   display: block;
   margin: 0;
-  filter: brightness(0.7);
+  filter: brightness(0.8);
   transition-duration: 500ms;
 }
 .project-picture img {
@@ -315,15 +315,15 @@ body {
   text-decoration: none;
   padding: 0.25em 0;
   /* margin: 1em; */
-  color: var(--primary-lighter);
-  font-size: 1rem;
+  color: var(--primary-color);
+  font-size: 1.25rem;
   opacity: 1;
   transition-duration: 500ms;
 }
 
-.project-picture:hover,
-.project-picture:focus {
-  filter: brightness(0.8);
+.single-project:hover,
+.single-project:focus {
+  transform: scale(1.02);
   transition-duration: 500ms;
 }
 
@@ -371,6 +371,10 @@ body {
   .project-links a {
     font-size: 1.5rem;
     opacity: 0;
+    color: var(--white);
+    background: var(--primary-darker);
+    padding: 0.15em 0.25em;
+    border-radius: 5px;
   }
 
   .project-links:hover a,
@@ -389,9 +393,85 @@ body {
     width: 15px;
     height: 22px;
     margin-bottom: 0px;
+    fill: var(--white);
   }
 }
 /* Reminder: the Bootstrap breakpoints are:  Small(576), medium(768), large(992) and xl(1200) */
+
+/*@# -------------- SKILLS AND CERTS ------------- */
+
+.skills-section {
+  padding: 1.75em 1em;
+}
+
+.title--smaller {
+  font-size: 2rem;
+  margin-bottom: 0.75em;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1800px;
+}
+
+.skill-icon {
+  width: 55px;
+  height: 55px;
+  margin-right: 0.5em;
+}
+
+.individual-skill {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin: 0 1.5em 0.5em 0;
+}
+
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 1.25em;
+  row-gap: 1em;
+}
+
+.individual-certificate {
+  background: rgba(31, 31, 31, 0.39);
+  /* background: black; */
+  padding: 0.5em;
+}
+
+.certificates-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transform: scale(0.98);
+  transition-duration: 500ms;
+}
+
+.certificates-container img:hover {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
+
+@media screen and (min-width: 769px) {
+  .skills-section {
+    padding: 1.75em 0.5em;
+    max-width: calc(100% - 5rem);
+    margin: 0 auto;
+  }
+
+  .title--smaller {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  .individual-skill {
+    font-size: 1.5rem;
+  }
+}
+
+/*@# -------------- FOOTER SECTION -------------- */
 
 footer {
   padding: 2.25em 0.75em;
