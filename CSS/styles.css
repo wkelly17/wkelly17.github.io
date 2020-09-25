@@ -140,11 +140,10 @@ body {
   }
 }
 
-/* Reminder: the Bootstrap breakpoints are:  Small(576), medium(768), large(992) and xl(1200) */
+/*@# --------------- ABOUT SECTION -------------- */
 
 .about-section {
   padding: 1.75em 1em;
-  /* transform: translateY(-30%); */
   transition-duration: 750ms;
   background: var(--black);
   color: var(--white);
@@ -156,7 +155,6 @@ body {
   font-size: 1.25rem;
   letter-spacing: -0.5px;
   position: relative;
-  /* background: orange; */
   width: max-content;
   margin: 0 auto 0.5em;
   padding: 0.25em;
@@ -229,6 +227,7 @@ body {
   letter-spacing: 1px;
   font-weight: 300;
   font-family: var(--main-font);
+  font-size: 1.125rem;
 }
 .about-copy a {
   color: var(--primary-lighter);
@@ -316,7 +315,7 @@ body {
   padding: 0.25em 0;
   /* margin: 1em; */
   color: var(--primary-color);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   opacity: 1;
   transition-duration: 500ms;
 }
@@ -334,7 +333,7 @@ body {
   font-size: 0.875rem;
   color: var(--white);
   padding: 0.25em;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .chevron {
