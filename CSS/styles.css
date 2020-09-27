@@ -168,6 +168,8 @@ body {
   }
 }
 
+/*@# --------------- ABOUT SECTION -------------- */
+
 .about-section {
   padding: 1.75em 1em;
   transition-duration: 750ms;
@@ -253,6 +255,7 @@ body {
   letter-spacing: 1px;
   font-weight: 300;
   font-family: var(--main-font);
+  font-size: 1.125rem;
 }
 .about-copy a {
   color: var(--primary-lighter);
@@ -339,7 +342,7 @@ body {
   text-decoration: none;
   padding: 0.25em 0;
   color: var(--primary-color);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   opacity: 1;
   transition-duration: 500ms;
 }
@@ -357,7 +360,7 @@ body {
   font-size: 0.875rem;
   color: var(--white);
   padding: 0.25em;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .chevron {
