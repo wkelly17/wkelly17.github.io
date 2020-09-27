@@ -44,12 +44,39 @@ body {
 }
 
 .hamburger-menu {
+  width: 2rem;
+  height: 2rem;
   fill: var(--primary-darker);
+  overflow: visible;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: unset;
 }
+.hamburger-menu:focus {
+  outline: solid 2px var(--primary-color);
+}
+.bottom-ham-open {
+  transform-origin: bottom left;
+  transform: rotate(-45deg) translate(-13px, 10px);
+  width: 2.25rem;
+  transition: 0.25s ease-in-out 0.35s;
+}
+
+.top-ham-open {
+  transform-origin: top left;
+  transform: rotate(45deg) translate(7px, -19px);
+  width: 2.25rem;
+  transition: 0.25s ease-in-out 0.35s;
+}
+.middle-ham-open {
+  opacity: 0;
+  transition-duration: 0.25s;
+  transition-delay: 0.35s;
+}
+
 .top-nav {
-  /* background: white; */
   overflow: hidden;
-  /* opacity: 0; */
   margin-bottom: 1em;
 }
 .top-nav-list {
@@ -109,6 +136,7 @@ body {
   .hamburger-menu {
     display: none;
   }
+
   .top-nav {
     flex-grow: 1;
   }
@@ -140,11 +168,8 @@ body {
   }
 }
 
-/* Reminder: the Bootstrap breakpoints are:  Small(576), medium(768), large(992) and xl(1200) */
-
 .about-section {
   padding: 1.75em 1em;
-  /* transform: translateY(-30%); */
   transition-duration: 750ms;
   background: var(--black);
   color: var(--white);
@@ -156,7 +181,6 @@ body {
   font-size: 1.25rem;
   letter-spacing: -0.5px;
   position: relative;
-  /* background: orange; */
   width: max-content;
   margin: 0 auto 0.5em;
   padding: 0.25em;
@@ -314,7 +338,6 @@ body {
   display: inline-block;
   text-decoration: none;
   padding: 0.25em 0;
-  /* margin: 1em; */
   color: var(--primary-color);
   font-size: 1.25rem;
   opacity: 1;
@@ -396,7 +419,6 @@ body {
     fill: var(--white);
   }
 }
-/* Reminder: the Bootstrap breakpoints are:  Small(576), medium(768), large(992) and xl(1200) */
 
 /*@# -------------- SKILLS AND CERTS ------------- */
 
@@ -437,7 +459,6 @@ body {
 
 .individual-certificate {
   background: rgba(31, 31, 31, 0.39);
-  /* background: black; */
   padding: 0.5em;
 }
 
