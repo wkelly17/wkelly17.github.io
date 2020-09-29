@@ -5,7 +5,7 @@
   --primary-lightest: #63d930;
   --black: #1f1f1f;
   --white: #f8f8f8;
-  --main-font: "Oswald", sans-serif;
+  --main-font: 'Oswald', sans-serif;
 }
 
 html {
@@ -49,10 +49,14 @@ body {
   fill: var(--primary-darker);
   overflow: visible;
   background-color: transparent;
-  padding: 0;
   margin: 0;
   border: unset;
 }
+
+.hamburger-menu svg {
+  overflow: visible;
+}
+
 .hamburger-menu:focus {
   outline: solid 2px var(--primary-color);
 }
@@ -178,7 +182,7 @@ body {
   font-weight: 400;
 }
 .about-section h1 {
-  font-family: "Fira Code", monospace;
+  font-family: 'Fira Code', monospace;
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: -0.5px;
