@@ -44,8 +44,6 @@ body {
 }
 
 .hamburger-menu {
-  width: 2rem;
-  height: 2rem;
   fill: var(--primary-darker);
   overflow: visible;
   background-color: transparent;
@@ -58,6 +56,8 @@ body {
 .hamburger-menu svg {
   overflow: visible;
   padding: 0.25em;
+  width: 32px;
+  height: 32px;
 }
 
 .hamburger-menu:focus {
@@ -71,14 +71,14 @@ body {
 .bottom-ham-open {
   transform-origin: bottom left;
   transform: rotate(-45deg) translate(-13px, 10px);
-  width: 2.25rem;
+  width: 44px;  /* static to ensure hamburger renders symmetrically.  Used REMS and didn't look right on my phone */
   transition: 0.25s ease-in-out 0.05s;
 }
 
 .top-ham-open {
   transform-origin: top left;
   transform: rotate(45deg) translate(7px, -19px);
-  width: 2.25rem;
+  width: 44px;  /* static to ensure hamburger renders symmetrically.  Used REMS and didn't look right on my phone */
   transition: 0.25s ease-in-out 0.05s;
 }
 .middle-ham-open {
