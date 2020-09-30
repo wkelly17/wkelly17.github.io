@@ -9,8 +9,8 @@ hamburger.addEventListener('click', openNav);
 hamburger.addEventListener('touchStart', openNav);
 
 function openNav(event) {
+  hamburgerToggle();
   topNavList.classList.toggle('top-nav-list-open');
-  // hamburgerToggle();
 }
 //todo: Figure out why the hamburger breaks on mobile screen animation.  For now September 29, 2020 taking it out of production by taking out the manage nav fxn.
 

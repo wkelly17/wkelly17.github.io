@@ -49,34 +49,42 @@ body {
   fill: var(--primary-darker);
   overflow: visible;
   background-color: transparent;
-  margin: 0;
+  margin: 0 0.5em 0 0;
   border: unset;
+  width: fit-content;
+  height: fit-content;
 }
 
 .hamburger-menu svg {
   overflow: visible;
+  padding: 0.25em;
 }
 
 .hamburger-menu:focus {
   outline: solid 2px var(--primary-color);
 }
+
+.hamburger-line {
+  transition: 0.25s ease;
+}
+
 .bottom-ham-open {
   transform-origin: bottom left;
   transform: rotate(-45deg) translate(-13px, 10px);
   width: 2.25rem;
-  transition: 0.25s ease-in-out 0.35s;
+  transition: 0.25s ease-in-out 0.05s;
 }
 
 .top-ham-open {
   transform-origin: top left;
   transform: rotate(45deg) translate(7px, -19px);
   width: 2.25rem;
-  transition: 0.25s ease-in-out 0.35s;
+  transition: 0.25s ease-in-out 0.05s;
 }
 .middle-ham-open {
   opacity: 0;
   transition-duration: 0.25s;
-  transition-delay: 0.35s;
+  transition-delay: 0.05s;
 }
 
 .top-nav {
