@@ -1,11 +1,22 @@
 :root {
+  /* Colors */
   --primary-color: #419a1c;
   --primary-darker: #28620f;
   --primary-lighter: #51be23;
   --primary-lightest: #63d930;
   --black: #1f1f1f;
   --white: #f8f8f8;
+  /* Fonts */
   --main-font: 'Oswald', sans-serif;
+  --font-secondary: 'Fira Code', monospace;
+
+  /* font-sizing */
+  --fs-biggest: 3rem;
+  --fs-bigger: 2rem;
+  --fs-big: 1.5rem;
+  --fs-normal-plus: 1.275rem;
+  --fs-normal: 1rem;
+  --fs-small: 0.875rem;
 }
 
 html {
@@ -26,7 +37,7 @@ body {
 .top-header {
   display: flex;
   flex-direction: column;
-  padding: 0 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .icons-container {
@@ -47,7 +58,7 @@ body {
   fill: var(--primary-darker);
   overflow: visible;
   background-color: transparent;
-  margin: 0 0.5em 0 0;
+  margin-right: 5px;
   border: unset;
   width: fit-content;
   height: fit-content;
@@ -55,13 +66,13 @@ body {
 
 .hamburger-menu svg {
   overflow: visible;
-  padding: 0.25em;
-  width: 32px;
-  height: 32px;
+  padding: 0.125em;
+  width: 20px;
+  height: 20px;
 }
 
 .hamburger-menu:focus {
-  outline: solid 2px var(--primary-color);
+  outline: solid 1px var(--primary-color);
 }
 
 .hamburger-line {
@@ -71,14 +82,14 @@ body {
 .bottom-ham-open {
   transform-origin: bottom left;
   transform: rotate(-45deg) translate(-13px, 10px);
-  width: 44px;  /* static to ensure hamburger renders symmetrically.  Used REMS and didn't look right on my phone */
+  width: 44px; /* static to ensure hamburger renders symmetrically.  Used REMS and didn't look right on my phone */
   transition: 0.25s ease-in-out 0.05s;
 }
 
 .top-ham-open {
   transform-origin: top left;
   transform: rotate(45deg) translate(7px, -19px);
-  width: 44px;  /* static to ensure hamburger renders symmetrically.  Used REMS and didn't look right on my phone */
+  width: 44px; /* static to ensure hamburger renders symmetrically.  Used REMS and didn't look right on my phone */
   transition: 0.25s ease-in-out 0.05s;
 }
 .middle-ham-open {
@@ -91,6 +102,7 @@ body {
   overflow: hidden;
   margin-bottom: 1em;
 }
+
 .top-nav-list {
   margin: 0 0 -100% 0;
   background: white;
@@ -114,9 +126,11 @@ body {
 
 .top-nav-list a {
   display: inline-block;
-  text-decoration: none;
-  font-size: 1.275rem;
   padding: 0.25em 0em;
+  text-decoration: none;
+  font-size: var(--fs-normal);
+  font-family: var(--font-secondary);
+  font-weight: 700;
   color: var(--primary-darker);
 }
 
@@ -137,7 +151,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
   }
   .icons-container {
@@ -153,7 +167,7 @@ body {
     flex-grow: 1;
   }
   .top-nav-list {
-    margin: 0;
+    margin: 0.75rem 0 0;
     background: var(--white);
     display: flex;
     justify-content: flex-end;
@@ -164,7 +178,7 @@ body {
   }
 
   .top-nav-list a {
-    padding: 0.25em 0.5em;
+    padding: 0.25em 0.75em;
   }
 
   .top-nav-list a:hover,
@@ -176,14 +190,15 @@ body {
 
 @media screen and (min-width: 1024px) {
   .top-header {
-    max-width: 70%;
+    width: 80%;
+    max-width: 1200px;
   }
 }
 
 /*@# --------------- ABOUT SECTION -------------- */
 
 .about-section {
-  padding: 1.75em 1em;
+  padding: 2.75em 1em;
   transition-duration: 750ms;
   background: var(--black);
   color: var(--white);
@@ -192,7 +207,7 @@ body {
 .about-section h1 {
   font-family: 'Fira Code', monospace;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: var(--fs-big);
   letter-spacing: -0.5px;
   position: relative;
   width: max-content;
@@ -200,13 +215,19 @@ body {
   padding: 0.25em;
   overflow: hidden;
 }
+/*# Only for very small phones to keep name on one line */
+@media screen and (max-width: 375px) {
+  .about-section h1 {
+    font-size: 1.125rem;
+  }
+}
 
 .about-section h1 span {
   position: absolute;
   top: 0;
   right: 0;
   background: var(--black);
-  height: 102%;
+  height: 100%;
   width: 99%;
   border-left: 0.2em solid transparent;
 
@@ -252,22 +273,19 @@ body {
   border-radius: 50%;
 }
 
-.about-header {
-  text-align: center;
-}
-
 .about-copy h2 {
-  font-size: 1.125rem;
+  font-size: var(--fs-normal-plus);
   font-weight: 400;
   text-align: center;
 }
 
 .about-copy p {
-  line-height: 1.6;
+  padding: 0.75em 1em;
   letter-spacing: 1px;
+  line-height: 1.7;
   font-weight: 300;
   font-family: var(--main-font);
-  font-size: 1.125rem;
+  font-size: var(--fs-normal);
 }
 .about-copy a {
   color: var(--primary-lighter);
@@ -279,7 +297,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .about-section h1 {
-    font-size: 2.25rem;
+    font-size: var(--fs-bigger);
     position: relative;
     width: max-content;
   }
@@ -289,12 +307,12 @@ body {
   }
 
   .about-copy h2 {
-    font-size: 1.75rem;
+    font-size: var(--fs-bigger);
   }
 
   .about-copy p {
-    line-height: 1.6;
-    font-size: 1.5rem;
+    line-height: 1.7;
+    font-size: var(--fs-big);
     width: 70%;
     max-width: 900px;
     margin: 0 auto;
@@ -304,20 +322,20 @@ body {
 /*@# ------------- PROJECTS SECTION ------------- */
 
 .projects-section {
-  padding: 1.75em 1em;
+  padding: 2.5em 1em;
 }
 
 .section-title {
   color: var(--primary-darker);
-  font-size: 3rem;
-  margin: 0 0 0.5em;
+  font-size: var(--fs-biggest);
+  margin: 0 0 1em;
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  column-gap: 1.25em;
-  row-gap: 1em;
+  column-gap: 2.25em;
+  row-gap: 2em;
 }
 
 .single-project {
@@ -347,7 +365,7 @@ body {
   opacity: 1;
   transition-duration: 500ms;
   color: var(--white);
-  font-size: 1.75rem;
+  font-size: var(--fs-bigger);
 }
 
 .project-links a {
@@ -355,7 +373,7 @@ body {
   text-decoration: none;
   padding: 0.25em 0;
   color: var(--primary-color);
-  font-size: 1.375rem;
+  font-size: var(--fs-normal-plus);
   opacity: 1;
   transition-duration: 500ms;
 }
@@ -370,10 +388,9 @@ body {
   text-align: center;
   line-height: 1;
   margin: 0.25em 0;
-  font-size: 0.875rem;
   color: var(--white);
-  padding: 0.25em;
-  font-size: 1.25rem;
+  padding: 0.25em 0.5em;
+  font-size: var(--fs-normal);
 }
 
 .chevron {
@@ -386,7 +403,7 @@ body {
 
 @media screen and (min-width: 769px) {
   .projects-section {
-    padding: 1.75em 0.5em;
+    padding: 3.75em 0.5em;
     max-width: calc(100% - 5rem);
     margin: 0 auto;
   }
@@ -404,11 +421,11 @@ body {
     opacity: 1;
     transition-duration: 500ms;
     color: var(--white);
-    font-size: 1.75rem;
+    font-size: var(--fs-big);
   }
 
   .project-links a {
-    font-size: 1.5rem;
+    font-size: var(--fs-big);
     opacity: 0;
     color: white;
     background: var(--primary-color);
@@ -426,7 +443,7 @@ body {
 
   .project-description p {
     text-align: left;
-    font-size: 1.25rem;
+    font-size: var(--fs-normal-plus);
   }
   .chevron {
     width: 15px;
@@ -439,7 +456,7 @@ body {
 .see-more-copy {
   width: fit-content;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: var(--fs-normal-plus);
   margin: 1em auto;
   color: var(--white);
   background: var(--primary-darker);
@@ -450,14 +467,14 @@ body {
 .see-more-copy a {
   color: white;
   color: var(--primary-lightest);
-  font-size: 1.45rem;
+  font-size: var(--fs-big);
 }
 
 @media screen and (min-width: 769px) {
   .see-more-copy {
     width: fit-content;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: var(--fs-normal-plus);
     margin: 1em 0;
     color: var(--white);
     background: var(--primary-darker);
@@ -467,7 +484,7 @@ body {
   .see-more-copy a {
     color: white;
     color: var(--primary-lightest);
-    font-size: 1.25rem;
+    font-size: var(--fs-normal-plus);
   }
 }
 
@@ -475,10 +492,11 @@ body {
 
 .skills-section {
   padding: 1.75em 1em;
+  margin-bottom: 1.25em;
 }
 
 .title--smaller {
-  font-size: 2rem;
+  font-size: var(--fs-bigger);
   margin-bottom: 0.75em;
 }
 
@@ -497,14 +515,14 @@ body {
 .individual-skill {
   display: flex;
   align-items: center;
-  font-size: 1.125rem;
-  margin: 0 1.5em 0.5em 0;
+  font-size: var(--fs-normal-plus);
+  margin: 0 1.5em 1em 0;
 }
 
 .certificates-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  column-gap: 1.25em;
+  column-gap: 1.75em;
   row-gap: 1em;
 }
 
@@ -530,16 +548,17 @@ body {
   .skills-section {
     padding: 1.75em 0.5em;
     max-width: calc(100% - 5rem);
-    margin: 0 auto;
+    margin: 0 auto 1.5em;
   }
 
   .title--smaller {
-    font-size: 3rem;
-    margin-bottom: 0.5em;
+    font-size: var(--fs-biggest);
+    margin-bottom: 0.75em;
   }
 
   .individual-skill {
-    font-size: 1.5rem;
+    font-size: var(--fs-big);
+    margin-bottom: 1em;
   }
 }
 
@@ -552,7 +571,7 @@ footer {
 }
 
 .contact-me h2 {
-  font-size: 1.5rem;
+  font-size: var(--fs-big);
   font-weight: 400;
   margin-top: 0;
 }
@@ -574,6 +593,11 @@ footer {
   fill: var(--primary-color);
 }
 
+.social-icon:hover {
+  transform: translateY(-15px);
+  transition-duration: 0.25s;
+}
+
 @media screen and (min-width: 470px) {
   footer {
     padding: 2.25em 0.75em;
@@ -581,5 +605,14 @@ footer {
   .contact-me {
     max-width: calc(100% - 5rem);
     margin: 0 auto;
+  }
+
+  .contact-me h2 {
+    font-size: var(--fs-bigger);
+  }
+
+  .social-icon {
+    width: 65px;
+    height: 65px;
   }
 }
