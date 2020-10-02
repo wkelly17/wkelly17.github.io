@@ -67,8 +67,8 @@ body {
 .hamburger-menu svg {
   overflow: visible;
   padding: 0.125em;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .hamburger-menu:focus {
@@ -281,14 +281,15 @@ body {
 
 .about-copy p {
   padding: 0.75em 1em;
-  letter-spacing: 1px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
   font-family: var(--main-font);
-  font-size: var(--fs-normal);
+  font-size: var(--fs-normal-plus);
+  text-align: left;
 }
 .about-copy a {
   color: var(--primary-lighter);
+  text-decoration: none;
 }
 
 .about-copy a:hover {
@@ -491,7 +492,7 @@ body {
 /*@# -------------- SKILLS AND CERTS ------------- */
 
 .skills-section {
-  padding: 1.75em 1em;
+  padding: 1.75em 1.25em;
   margin-bottom: 1.25em;
 }
 
@@ -546,7 +547,7 @@ body {
 
 @media screen and (min-width: 769px) {
   .skills-section {
-    padding: 1.75em 0.5em;
+    padding: 1.75em 1.5em 4em;
     max-width: calc(100% - 5rem);
     margin: 0 auto 1.5em;
   }
@@ -565,7 +566,7 @@ body {
 /*@# -------------- FOOTER SECTION -------------- */
 
 footer {
-  padding: 2.25em 0.75em;
+  padding: 3.25em 0.75em;
   background: var(--black);
   color: var(--white);
 }
