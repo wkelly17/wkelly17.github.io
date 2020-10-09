@@ -67,8 +67,8 @@ body {
 .hamburger-menu svg {
   overflow: visible;
   padding: 0.125em;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .hamburger-menu:focus {
@@ -231,7 +231,6 @@ body {
   width: 99%;
   border-left: 0.2em solid transparent;
 
-  -webkit-animation: typing 2s steps(19) 2s 3 forwards, cursor 1s 2s 6 forwards;
   animation-name: typing, cursor;
   animation-delay: 2s, 2s;
   animation-duration: 3s, 1s;
@@ -281,14 +280,15 @@ body {
 
 .about-copy p {
   padding: 0.75em 1em;
-  letter-spacing: 1px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
   font-family: var(--main-font);
-  font-size: var(--fs-normal);
+  font-size: var(--fs-normal-plus);
+  text-align: left;
 }
 .about-copy a {
   color: var(--primary-lighter);
+  text-decoration: none;
 }
 
 .about-copy a:hover {
@@ -491,7 +491,7 @@ body {
 /*@# -------------- SKILLS AND CERTS ------------- */
 
 .skills-section {
-  padding: 1.75em 1em;
+  padding: 1.75em 1.25em;
   margin-bottom: 1.25em;
 }
 
@@ -546,7 +546,7 @@ body {
 
 @media screen and (min-width: 769px) {
   .skills-section {
-    padding: 1.75em 0.5em;
+    padding: 1.75em 1.5em 4em;
     max-width: calc(100% - 5rem);
     margin: 0 auto 1.5em;
   }
@@ -565,7 +565,7 @@ body {
 /*@# -------------- FOOTER SECTION -------------- */
 
 footer {
-  padding: 2.25em 0.75em;
+  padding: 3.25em 0.75em;
   background: var(--black);
   color: var(--white);
 }
@@ -614,5 +614,37 @@ footer {
   .social-icon {
     width: 65px;
     height: 65px;
+  }
+}
+
+/* @ resume */
+.resume-slot {
+  margin-top: 1rem;
+}
+.resume-slot h3 {
+  font-size: var(--fs-big);
+  font-weight: 400;
+}
+
+.resume-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.resume-link:hover, .resume-link:focus {
+  transform: translateY(-5px);
+  color: var(--primary-lightest);
+  transition-duration: 0.25s;
+}
+
+@media screen and (min-width: 470px) {
+  .resume-slot {
+    max-width: calc(100% - 5rem);
+    margin: 0 auto;
+  }
+
+  .resume-slot h3 {
+    font-size: var(--fs-bigger);
   }
 }
