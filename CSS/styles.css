@@ -168,6 +168,7 @@ body {
   }
   .top-nav-list {
     margin: 0.75rem 0 0;
+    padding: 0.5em 0.75em;
     background: var(--white);
     display: flex;
     justify-content: flex-end;
@@ -183,7 +184,7 @@ body {
 
   .top-nav-list a:hover,
   .top-nav-list a:focus {
-    transform: translateY(-10px);
+    transform: scale(1.2);
     transition-duration: 250ms;
   }
 }
@@ -591,10 +592,11 @@ footer {
   height: 45px;
   display: inline-block;
   fill: var(--primary-color);
+  margin: 0 5px;
 }
 
 .social-icon:hover {
-  transform: translateY(-15px);
+  transform: scale(1.2);
   transition-duration: 0.25s;
 }
 
@@ -632,7 +634,8 @@ footer {
   display: inline-block;
 }
 
-.resume-link:hover, .resume-link:focus {
+.resume-link:hover,
+.resume-link:focus {
   transform: translateY(-5px);
   color: var(--primary-lightest);
   transition-duration: 0.25s;
